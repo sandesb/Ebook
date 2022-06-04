@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://localhost:8081/Ebook1/helpcss.css">
+    </head>
+    <body>
+        <!-- dialog box -->
+        <div id="white-background">
+        </div>
+        <div id="dlgbox">
+            <div id="dlg-header">
+                Yusuf Shakeel | stay happy and keep smiling :-)
+            </div>
+            <div id="dlg-body">
+                <div id="dlg-img">
+                    <img src="img-64x64.jpg" width="64" height="64">
+                </div>
+                <div id="dlg-link">
+                    <h3>Links</h3>
+                    <a href="https://www.facebook.com/yusufshakeel">facebook.com/yusufshakeel</a><br>
+                </div>
+                <div id="dlg-text">
+                    <p>Create a custom dialog box like facebook!</p>
+                </div>
+                </div>
+            <div id="dlg-footer">
+                <button class="btn"onclick="dlgOK()">OK</button>
+            </div>
+            </div>
+        <!-- rest of the page -->
+        
+     
+        
+        <button class="btn" onclick="showDialog()"><i class=" fa fa-info-circle"></i>  Help  <i class=" fa fa-question"></i></button>
+        <!-- script of dialog -->
+        <script>
+            function dlgOK(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "none";
+                dlg.style.display = "none";
+            }
+            
+            function showDialog(){
+                var whitebg = document.getElementById("white-background");
+                var dlg = document.getElementById("dlgbox");
+                whitebg.style.display = "block";
+                dlg.style.display = "block";
+                
+                var winWidth = window.innerWidth;
+                var winHeight = window.innerHeight;
+              
+                dlg.style.left = (winWidth/2) - 2000/2 + "px";
+                dlg.style.top = "100px";
+            }
+        </script>
+    </body>
+</html>
